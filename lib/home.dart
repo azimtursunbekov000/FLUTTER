@@ -8,7 +8,7 @@ class Screen1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text(
+        title: const Text(
           "SingleChildScrollView Example",
           style: TextStyle(
             color: Colors.black,
@@ -17,7 +17,7 @@ class Screen1 extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         // padding: EdgeInsets.all(10),
         // reverse: true,
@@ -107,7 +107,7 @@ class Screen2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "ListViewExample",
           style: TextStyle(
             color: Colors.black,
@@ -121,14 +121,14 @@ class Screen2 extends StatelessWidget {
         padding: EdgeInsets.zero,
         // reverse: true,
         // scrollDirection: Axis.horizontal,
-        physics: AlwaysScrollableScrollPhysics(
+        physics: const AlwaysScrollableScrollPhysics(
           parent: BouncingScrollPhysics(),
         ),
         children: [
-          RedContainer(),
-          BlueContainer(),
-          BlackContainer(),
-          PurpleContainer(),
+          const RedContainer(),
+          const BlueContainer(),
+          const BlackContainer(),
+          const PurpleContainer(),
         ],
       ),
     );
@@ -144,12 +144,12 @@ class Screen3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined),
-          color: Color.fromRGBO(89, 164, 242, 1),
+          icon: const Icon(Icons.arrow_back_ios_outlined),
+          color: const Color.fromRGBO(89, 164, 242, 1),
           onPressed: () {},
         ),
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           " ListView builder Example",
           style: TextStyle(
             color: Colors.black,
@@ -163,14 +163,14 @@ class Screen3 extends StatelessWidget {
         // itemCount: 20,
         itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.symmetric(vertical: 20),
+            margin: const EdgeInsets.symmetric(vertical: 20),
             height: 200,
             width: 200,
             color: Colors.red,
             child: Text(
               // "$index",
               '${chars[index]}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 30,
                 color: Colors.white,
               ),
@@ -190,12 +190,12 @@ class Screen4 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined),
-          color: Color.fromRGBO(89, 164, 242, 1),
+          icon: const Icon(Icons.arrow_back_ios_outlined),
+          color: const Color.fromRGBO(89, 164, 242, 1),
           onPressed: () {},
         ),
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           " Example",
           style: TextStyle(
             color: Colors.black,
@@ -215,7 +215,7 @@ class Screen4 extends StatelessWidget {
           );
         },
         separatorBuilder: (context, index) {
-          return SizedBox(
+          return const SizedBox(
             height: 20,
           );
         },
@@ -232,12 +232,12 @@ class Screen5 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined),
-          color: Color.fromRGBO(89, 164, 242, 1),
+          icon: const Icon(Icons.arrow_back_ios_outlined),
+          color: const Color.fromRGBO(89, 164, 242, 1),
           onPressed: () {},
         ),
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "Телефоны служб",
           style: TextStyle(
             color: Colors.black,
@@ -247,12 +247,12 @@ class Screen5 extends StatelessWidget {
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           vertical: 10,
           horizontal: 15,
         ),
         children: [
-          Text(
+          const Text(
             "Медицина",
             style: TextStyle(
               color: Colors.black,
@@ -260,11 +260,11 @@ class Screen5 extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SizedBox(
             height: 83,
             child: ListView(
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               children: [
                 Container(
@@ -282,7 +282,7 @@ class Screen5 extends StatelessWidget {
                         width: 51,
                         height: 51,
                       ),
-                      Text(
+                      const Text(
                         "Единый телефон\nслужб",
                         style: TextStyle(
                           color: Colors.white,
@@ -291,7 +291,7 @@ class Screen5 extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Container(
                   width: 232,
                   height: 60,
@@ -299,53 +299,53 @@ class Screen5 extends StatelessWidget {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Content(),
+                  child: const Content(),
                 ),
               ],
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "Полиция",
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SizedBox(
             height: 83,
             child: ListView.builder(
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: 2,
               itemBuilder: (context, index) {
                 return Container(
-                  margin: EdgeInsets.only(right: 10),
+                  margin: const EdgeInsets.only(right: 10),
                   width: 232,
                   height: 60,
                   decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Content(),
+                  child: const Content(),
                 );
               },
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "Посольство",
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SizedBox(
             height: 83,
             child: SingleChildScrollView(
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
@@ -356,9 +356,9 @@ class Screen5 extends StatelessWidget {
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Content(),
+                    child: const Content(),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Container(
                     width: 232,
                     height: 83,
@@ -366,25 +366,25 @@ class Screen5 extends StatelessWidget {
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Content(),
+                    child: const Content(),
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "Транспорт",
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SizedBox(
             height: 83,
             child: ListView.separated(
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: 2,
               itemBuilder: (context, index) {
@@ -395,27 +395,27 @@ class Screen5 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.blue,
                   ),
-                  child: Content(),
+                  child: const Content(),
                 );
               },
               separatorBuilder: (context, index) {
-                return SizedBox(width: 10);
+                return const SizedBox(width: 10);
               },
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "Свои номера",
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SizedBox(
             height: 83,
             child: ListView(
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               children: [
                 Container(
@@ -425,9 +425,9 @@ class Screen5 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.blue,
                   ),
-                  child: Content(),
+                  child: const Content(),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Container(
                   width: 232,
                   height: 60,
@@ -435,7 +435,7 @@ class Screen5 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.blue,
                   ),
-                  child: Content(),
+                  child: const Content(),
                 ),
               ],
             ),
@@ -459,7 +459,7 @@ class Content extends StatelessWidget {
           width: 51,
           height: 51,
         ),
-        Text(
+        const Text(
           "Единый телефон\nслужб",
           style: TextStyle(
             color: Colors.white,
