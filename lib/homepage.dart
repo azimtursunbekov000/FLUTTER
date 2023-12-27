@@ -25,9 +25,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Text(
             "+",
-            style: TextStyle(
-              fontSize: 30,
-            ),
+            style: TextStyle(fontSize: 30),
           ),
           TextField(
             keyboardType: TextInputType.number,
@@ -53,9 +51,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Text(
             "$summ",
-            style: TextStyle(
-              fontSize: 40,
-            ),
+            style: TextStyle(fontSize: 40),
           ),
         ],
       ),
